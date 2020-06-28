@@ -22,7 +22,7 @@ namespace MoreBiomesPlus.Biomes
             }
             tasks.Insert(genIndex + 1, new PassLegacy("A little bit of dirt", delegate (GenerationProgress progress)
             {
-                progress.Message = "Generating mountains...";
+                progress.Message = "A little bit of dirt";
                 for (int i = 0; i < Main.maxTilesX / 900; i++)       //900 is how many biomes. the bigger is the number = less biomes
                 {
                     int X = WorldGen.genRand.Next(1, Main.maxTilesX - 250);
