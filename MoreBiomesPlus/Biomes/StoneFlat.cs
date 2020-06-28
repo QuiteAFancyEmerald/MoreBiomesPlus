@@ -30,7 +30,7 @@ namespace MoreBiomesPlus
                     int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - 100, Main.maxTilesY - 200);
                     int TileType = 1;  
 
-                    WorldGen.TileRunner(X, Y, 200, WorldGen.genRand.Next(-20, 50), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome; 100, 200 this changes how random it looks.
+                    WorldGen.TileRunner(X, Y, 200, WorldGen.genRand.Next(50, 200), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome; 100, 200 this changes how random it looks.
 
                 }
 
