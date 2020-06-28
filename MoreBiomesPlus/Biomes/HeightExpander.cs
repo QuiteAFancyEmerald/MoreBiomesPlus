@@ -20,7 +20,7 @@ namespace MoreBiomesPlus.Biomes
             {
                 return;
             }
-            tasks.Insert(genIndex + 1, new PassLegacy("Mountain Biome", delegate (GenerationProgress progress)
+            tasks.Insert(genIndex + 1, new PassLegacy("A little bit of dirt", delegate (GenerationProgress progress)
             {
                 progress.Message = "Generating mountains...";
                 for (int i = 0; i < Main.maxTilesX / 900; i++)       //900 is how many biomes. the bigger is the number = less biomes
