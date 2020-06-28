@@ -26,11 +26,11 @@ namespace MoreBiomesPlus
                 progress.Message = "Creating obsidian caves";
                 for (int i = 0; i < Main.maxTilesX / 900; i++)       //900 is how many biomes. the bigger is the number = less biomes
                 {
-                    int X = WorldGen.genRand.Next(1, Main.maxTilesX - 300);
-                    int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - 100, Main.maxTilesY - 0);
+                    int X = WorldGen.genRand.Next(1, Main.maxTilesX - 100);
+                    int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - 100);
                     int TileType = 56;   //obsidian block
 
-                    WorldGen.TileRunner(X, Y, 350, WorldGen.genRand.Next(100, 200), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome     100, 200 this changes how random it looks.
+                    WorldGen.TileRunner(X, Y, 200, WorldGen.genRand.Next(20, 50), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome     100, 200 this changes how random it looks.
 
                 }
 
