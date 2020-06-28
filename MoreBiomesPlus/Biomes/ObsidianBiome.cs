@@ -31,7 +31,7 @@ namespace MoreBiomesPlus
                     int TileType = 56;   //obsidian block
 
                     WorldGen.TileRunner(X, Y, 350, WorldGen.genRand.Next(80, 150), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome     100, 200 this changes how random it looks.
-                    //smaller random numbers for caves
+                    //smaller random numbers for caves...
                 }
 
             }));
