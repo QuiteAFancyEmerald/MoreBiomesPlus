@@ -1,0 +1,3 @@
+displayName = More Biomes Plus
+author = Quite A Facny Emerald
+version = 0.1
