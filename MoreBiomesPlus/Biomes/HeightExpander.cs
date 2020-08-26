@@ -15,7 +15,7 @@ namespace MoreBiomesPlus.Biomes
 
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         {
-            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies")); //modified gen pass
+            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Terrain")); //modified gen pass
             if (genIndex == -1)
             {
                 return;
