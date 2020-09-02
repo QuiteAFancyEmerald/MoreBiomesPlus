@@ -15,7 +15,7 @@ namespace MoreBiomesPlus.Biomes
 
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         {
-            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies")); //modified gen pass
+            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Terrain")); //modified gen pass
             if (genIndex == -1)
             {
                 return;
@@ -23,13 +23,13 @@ namespace MoreBiomesPlus.Biomes
             tasks.Insert(genIndex + 1, new PassLegacy("A little bit of dirt", delegate (GenerationProgress progress)
             {
                 progress.Message = "A little bit of dirt";
-                for (int i = 0; i < Main.maxTilesX / 900; i++)       //900 is how many biomes. The bigger is the number = less biomes.
+                for (int i = 0; i < Main.maxTilesX / 500; i++)       //900 is how many biomes. The bigger is the number = less biomes.
                 {
-                    int X = WorldGen.genRand.Next(1, Main.maxTilesX - 250);
-                    int Y = WorldGen.genRand.Next((int)Main.maxTilesY - 600);
+                    int X = WorldGen.genRand.Next(1, Main.maxTilesX - 500);
+                    int Y = WorldGen.genRand.Next((int)Main.maxTilesY - 1000);
                     int TileType = 0;     //Standard number equals vanilla tiles/
 
-                    WorldGen.TileRunner(X, Y, 200, WorldGen.genRand.Next(800, 900), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome; 100, 200 this changes how random it looks.
+                    WorldGen.TileRunner(X, Y, 900, WorldGen.genRand.Next(900, 1000), TileType, false, 0f, 0f, true, true); 
 
                 }
 

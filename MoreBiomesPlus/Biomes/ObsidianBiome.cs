@@ -16,7 +16,7 @@ namespace MoreBiomesPlus
 
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         {
-            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
+            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Granite"));
             if (genIndex == -1)
             {
                 return;
@@ -26,11 +26,11 @@ namespace MoreBiomesPlus
                 progress.Message = "Creating obsidian caves";
                 for (int i = 0; i < Main.maxTilesX / 950; i++)       //900 is how many biomes. the bigger is the number = less biomes
                 {
-                    int X = WorldGen.genRand.Next(1, Main.maxTilesX - 150);
-                    int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - 20, Main.maxTilesY - 200);
+                    int X = WorldGen.genRand.Next(1, Main.maxTilesX - 50);
+                    int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - 20, Main.maxTilesY - 100);
                     int TileType = 56;   //obsidian block
 
-                    WorldGen.TileRunner(X, Y, 350, WorldGen.genRand.Next(80, 150), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome     100, 200 this changes how random it looks.
+                    WorldGen.TileRunner(X, Y, 100, WorldGen.genRand.Next(80, 100), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome     100, 200 this changes how random it looks.
                     //smaller random numbers for caves...
                 }
 

@@ -16,15 +16,15 @@ namespace MoreBiomesPlus
 
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         {
-            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
+            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Terrain"));
             if (genIndex == -1)
             {
                 return;
             }
-            tasks.Insert(genIndex + 1, new PassLegacy("Stone Flat", delegate (GenerationProgress progress)
+            tasks.Insert(genIndex + 1, new PassLegacy("Adding in some extra stone...", delegate (GenerationProgress progress)
             {
                 progress.Message = "Some nice flats...";
-                for (int i = 0; i < Main.maxTilesX / 700; i++)       //900 is how many biomes. the bigger is the number = less biomes
+                for (int i = 0; i < Main.maxTilesX / 300; i++)       //900 is how many biomes. the bigger is the number = less biomes
                 {
                     int X = WorldGen.genRand.Next(1, Main.maxTilesX - 200);
                     int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - 100, Main.maxTilesY - 200);
